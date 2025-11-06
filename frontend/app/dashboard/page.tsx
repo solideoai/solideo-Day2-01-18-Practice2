@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -50,9 +51,12 @@ export default async function DashboardPage() {
             <p className="text-gray-600 mb-4">
               출발지와 목적지를 입력하고 최적의 경로를 찾아보세요.
             </p>
-            <button className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            <Link
+              href="/search"
+              className="block w-full px-4 py-2 bg-blue-600 text-white text-center rounded-md hover:bg-blue-700"
+            >
               여행 시작하기
-            </button>
+            </Link>
           </div>
 
           {/* My Trips */}
