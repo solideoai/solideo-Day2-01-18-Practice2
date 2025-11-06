@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: tripsync-backend
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/tripsync
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+
+  webflux:
+    base-path: /api
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.tripsync: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
