@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -13,6 +15,20 @@ export default function Home() {
             <p className="text-lg text-gray-700 mb-6">
               실시간 교통정보와 AI 추천을 통해 개인 맞춤형 여행 경험을 제공합니다.
             </p>
+            <div className="flex justify-center space-x-4 mb-12">
+              <Link
+                href="/auth/signup"
+                className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+              >
+                시작하기
+              </Link>
+              <Link
+                href="/auth/login"
+                className="px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition"
+              >
+                로그인
+              </Link>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="text-4xl mb-4">🚗</div>
